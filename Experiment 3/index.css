@@ -1,0 +1,158 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #53125c;
+  width: 100vw;
+  height: 20vh;
+  float: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  left: 25%;
+}
+
+#social-icons {
+  background-color: #fff;
+  padding: 10px;
+}
+
+#social-icons a img {
+  width: 32px;
+  height: 32px;
+}
+
+nav {
+  background-color: skyblue;
+  display: inline-block;
+  width: calc(100vw - 37px);
+  text-align: center;
+  padding: 10px;
+}
+
+nav a {
+  color: black;
+  margin-right: 8vw;
+  margin-left: 8vw;
+  font-size: large;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#main-section {
+  background-image: url("http://static.demilked.com/wp-content/uploads/2019/02/5c66b239284f2-eminem-never-smile-photos-mike-brown-10-5c651ec9a9698__605.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+#main-section div p {
+  margin-left: 40px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 30px 50px 0 50px;
+  width: 40vw;
+  /* height: 300px; */
+  background-color: #a4d3ee;
+  border-style: dotted;
+  border-color: black;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+#store {
+  display: flex;
+  justify-content: space-between;
+  background-color: #c0c0c0;
+  position: relative;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+#store .item {
+  margin: 10px;
+}
+
+#store .item img {
+  width: 400px;
+  height: 300px;
+}
+
+#store .item:nth-child(1) {
+  background-color: #231885;
+}
+
+#store .item:nth-child(2) {
+  background-color: #056a7c;
+}
+
+#store .item:nth-child(3) {
+  background-color: #266104;
+}
+
+#store .item:nth-child(4) {
+  background-color: #fd8a07;
+}
+
+#store .item h2 {
+  /* position: absolute; */
+  bottom: 15%;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+}
+
+#store .item hr {
+  border: 1px solid red;
+}
+
+#family-section {
+  background-image: url("https://wallpapercave.com/uwp/uwp288272.gif");
+  /* background-size: 100vw 100vh; */
+  background-repeat: no-repeat;
+  display: flex;
+  background-size: cover;
+  justify-content: space-around;
+}
+
+#family-section .family-item .center-img {
+  text-align: center;
+}
+
+#family-section .family-item p {
+  width: 300px;
+}
+
+#family-section .family-item h3 {
+  color: rgb(0, 255, 0);
+}
+
+#family-section .family-item p {
+  color: white;
+}
+
+#family-section .family-item img {
+  border-radius: 100%;
+  /* background-color: white; */
+  width: 200px;
+  height: 200px;
+}
+
+footer {
+  padding: 20px 0 40px 20px;
+  background-color: #ffe4c4;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+footer p {
+  margin: 0px;
+  font-weight: bold;
+  font-style: oblique;
+  flex-wrap: wrap;
+  align-content: center;
+}
