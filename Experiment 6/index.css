@@ -1,0 +1,38 @@
+#time{
+    font-size: 2rem;
+  }
+  
+  #bg {
+    height: 30vh;
+  }
+  
+  #para{
+    font-size: 1rem;
+  }
+  
+  #image,#size,#bg,#clock,#students{
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .buttons{
+    display: flex;
+  }
+  
+  button{
+    border: 1px solid black;
+    padding: 5px;
+    margin: 10px;
+  }
+  
+  h1{
+    margin: 0;
+    text-align: center;
+  }
+  
+  ul{
+    list-style: none;
+    text-align: center;
+  }
