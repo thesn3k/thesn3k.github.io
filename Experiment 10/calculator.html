@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>Ex 10 - Calculator</title>
+
+    <style>
+      .exercise {
+        border: 2px solid black;
+        border-radius: 5px;
+        margin: 50px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div
+      ng-app="calculator-exercise"
+      ng-controller="calculatorController"
+      class="exercise"
+    >
+      <p>A: <input type="number" ng-model="a" /></p>
+      <p>B: <input type="number" ng-model="b" /></p>
+      <select name="" id="" ng-model="ops">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="/">/</option>
+        <option value="*">*</option>
+      </select>
+      <p>{{ result() }}</p>
+    </div>
+
+    <script>
+      const calculator = angular.module("calculator-exercise", []);
+
+      calculator.controller("calculatorController", function ($scope) {
+        $scope.result = function () {
+          if ($scope.ops == "+") return $scope.a + $scope.b;
+          if ($scope.ops == "-") return $scope.a - $scope.b;
+          if ($scope.ops == "/") return $scope.a / $scope.b;
+          if ($scope.ops == "*") return $scope.a * $scope.b;
+        };
+      });
+    </script>
+  </body>
+</html>

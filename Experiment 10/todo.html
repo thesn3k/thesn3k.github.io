@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>Ex 10 - ToDo</title>
+
+    <style>
+      .exercise {
+        border: 2px solid black;
+        border-radius: 5px;
+        margin: 50px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+     <div ng-app="todo-exercise" ng-controller="todosController" class="exercise">
+        Enter the todo <input type="text" ng-model="todo">
+        <button ng-click="additem()">add</button>
+        <div id="todos-section">
+            <h3>ToDo's</h3>
+            <div ng-repeat="todo in todos track by $index">
+                <li>{{ todo }}
+            </div>
+            </td>
+        </div> 
+    </div> 
+
+    <script>
+      const todos = angular.module("todo-exercise", []);
+
+      todos.controller("todosController", function ($scope) {
+          $scope.todos = [];
+          $scope.additem = function () {
+              $scope.todos.push($scope.todo);
+          };
+      });
+    </script>
+  </body>
+</html>

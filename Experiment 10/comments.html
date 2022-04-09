@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>Ex 10</title>
+
+    <style>
+      .exercise {
+        border: 2px solid black;
+        border-radius: 5px;
+        margin: 50px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+     <div ng-app="comment-exercise" ng-controller="commentsController" class="exercise">
+        Enter the comment <textarea type="text" ng-model="comment"></textarea>
+        <button ng-click="additem()">add</button>
+        <div id="comments-section">
+            <h3>Comments</h3>
+            <div ng-repeat="comment in comments track by $index">
+                <td>{{ comment }}
+            </div>
+            </td>
+        </div> 
+    </div> 
+
+    <script>
+      const comments = angular.module("comment-exercise", []);
+
+      comments.controller("commentsController", function ($scope) {
+          $scope.comments = [];
+          $scope.additem = () => $scope.comments.push($scope.comment) ;
+      });
+    </script>
+  </body>
+</html>
